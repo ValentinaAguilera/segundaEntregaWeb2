@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Auroras Boreales</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!--Tipografias-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+        <!-- favicon-->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+
+    </head>
+    <body id="home">
+        <header> 
+            <video poster="videos/auroraVideo.jpg" 
+                   preload="none" autoplay muted
+                   loop>
+                <source src="videos/auroraVideo.m4v"  type="video/mp4">
+                <source src="videos/auroraVideo.webm" type="video/webm">
+                <source src="videos/auroraVideo.ogv"  type="video/ogg">
+                <p>
+                    Su navegador no soporta estos videos, descargue el archivo directamente
+                    <a href="videos/auroraVideo.m4v"> Descarar video </a>
+                </p>
+            </video>
+            <div class="centrado">
+                <div class="contenidoMenu">
+                    <figure>
+                        <img src='img/logoAurora.png' alt="Logo Aurora">
+                    </figure>
+                    <nav>
+                         <ul>
+                             <li class="activo"><a href="">HOME</a>
+                             </li>
+                             <li><a href="alojamiento.html">ALOJAMIENTO</a>
+                             </li>
+                             <li><a href="ubicacion.html">UBICACIÓN</a>
+                             </li>
+                         </ul>
+                    </nav> 
+                </div>
+                <div class="formHome">
+                    <h1>
+                        Auroras Boreales
+                    </h1>
+                    <p>
+                        Descubre el precio de contemplar auroras boreales en primera fila desde estos 8 destinos económicos y ve preparando tu escapada.
+                    </p>
+                    <a href="#">Ver más</a>
+                </div>
+            </div>
+        </header>
+        
+        <aside>
+            <div class="centrado">
+                <form action="procesar.php" method="post" id="formBasic"> <!-- BUSCAR ESTE method post-->
+                    <h3>
+                        Buscar lugar
+                    </h3>     
+                        <div>
+                            <label for="destino">
+                                Destino
+                            </label>
+                            <select name="destino">
+                                <option value="1">Noruega</option>
+                                <option value="2">Islandia</option>
+                                <option value="3">Finlandia</option>
+                                <option value="4">Groenlandia</option>
+                                <option value="4">Suecia</option>
+                                <option value="4">Estados Unidos</option>
+                                <option value="4">Canadá</option>
+                                <option value="4">Chile</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="ida">
+                                Ida
+                            </label>
+                            <input type="date"  name="ida">
+                        </div>
+                        <div>                   
+                            <label for="vuelta">
+                                Vuelta
+                            </label>
+                            <input type="date"  name="vuelta">
+                        </div>
+                        <div> 
+                            <label for="pasajero">
+                                Huéspedes
+                            </label>
+                            <input type="number" name="pasajeros" id="pasajeros" placeholder="1">
+                        </div>
+                        <input type="submit" value="BUSCAR" id="buscar1">
+                    </form>
+                </div>
+        </aside>
+        
+        <section>
+                <div class="centrado">
+                    <h2> Lugares donde ver las Auroras Boreales
+                    </h2>
+                    <div class="contenedorMenuDos">
+                        <article>
+                            <div class="contenidoLugares">
+                                <figure>
+                                    <img src="img/noruega-min.jpg" alt="Foto de Auroras Boreales en Noruega" title="Auroras Boreales en Noruega">
+                                    <figcaption>
+                                        <h3> Noruega </h3>
+                                    </figcaption>
+                                </figure>
+                                <div class="texto">
+                                    <p>
+                                        Temporada en Tromsø: desde enero a principios de marzo.
+                                    </p>
+                                    <a href="#">AMPLIAR</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="contenidoLugares">
+                                <figure>
+                                    <img src="img/islandia-min.jpg" alt="Foto de Auroras Boreales en Islandia" title="Auroras Boreales en Islandia">
+                                    <figcaption>
+                                        <h3> Islandia </h3>
+                                    </figcaption>
+                                </figure>
+                                <div class="texto">
+                                    <p>
+                                        Temporada en Reikiavik: entre finales de agosto y mediados de abril.
+                                    </p>
+                                    <a href="#">AMPLIAR</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="contenidoLugares">
+                                <figure>
+                                    <img src="img/finlandia-min.jpg" alt="Foto de Auroras Boreales en Finlandia" title="Auroras Boreales en Finlandia">
+                                    <figcaption>
+                                        <h3> Finlandia </h3>
+                                    </figcaption>
+                                </figure>
+                                <div class="texto">
+                                    <p>
+                                        Temporada en Ivalo: entre septiembre y marzo.
+                                    </p>
+                                    <a href="#">AMPLIAR</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="contenidoLugares">
+                                <figure>
+                                    <img src="img/groenlandia-min.jpg" alt="Foto de Auroras Boreales en Groenlandia" title="Auroras Boreales en Groenlandia">
+                                    <figcaption>
+                                        <h3> Groenlandia </h3> 
+                                    </figcaption>
+                                </figure>
+                                <div class="texto">
+                                    <p>
+                                        Temporada en Kangerlussuaq: desde septiembre hasta mediados de abril.
+                                    </p>
+                                    <a href="#">AMPLIAR</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="contenidoLugares">
+                                <figure>
+                                    <img src="img/suecia-min.jpg" alt="Foto de Auroras Boreales en Suecia" title="Auroras Boreales en Suecia">
+                                    <figcaption>
+                                        <h3> Suecia </h3>
+                                    </figcaption>
+                                </figure>
+                                <div class="texto">
+                                    <p>
+                                        Temporada en Kiruna: desde principios de septiembre hasta marzo.
+                                    </p>
+                                    <a href="#">AMPLIAR</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+        </section>
+        
+        <section>
+            <div class="centrado">
+                <h3> Destinos cercanos
+                </h3>
+                <div class="eventos">
+                    <article>
+                        <figure>
+                            <img src="img/eeuu-min.jpg" alt="Foto de Auroras Boreales en Estados Unidos" title="Auroras Boreales en Estados Unidos">
+                        </figure>
+                        <div class="textoDestCercanos">
+                            <h4> Estados unidos
+                            </h4>
+                            <p>
+                              5 lugares para ver las auroras Boreales en EEUU. Elige tu destino!
+                            </p>
+                            <div class="contCercanos">
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                </ul>
+                                <a href="#">Ampliar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="img/canada-min.jpg" alt="Foto de Auroras Boreales en Canadá" title="Auroras Boreales en Canadá">
+                        </figure>
+                        <div class="textoDestCercanos">
+                            <h4> Canadá
+                            </h4>
+                            <p>
+                                4 lugares incríbles para ver las Auroras Boreales en Canadá.
+                            </p>
+                            <div class="contCercanos">
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                </ul> 
+                                <a href="#">Ampliar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="img/chile-min.jpg" alt="Foto de Auroras Boreales en Chile" title="Auroras Boreales en Chile">
+                        </figure>
+                            <div class="textoDestCercanos">
+                                <h4> Chile
+                                </h4>
+                                <p>
+                                  1 lugar único donde podrás ver Auroras Boreales en.
+                                </p>
+                                <div class="contCercanos">
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                </ul>
+                                <a href="#">Ampliar</a>
+                                </div>
+                            </div>
+                    </article>
+                </div>
+                <figure>
+                    <img src="img/estrellas.png" alt="Imagen de estrellas animadas">
+                </figure>
+            </div>
+        </section>
+        <footer>
+                <span> 
+                    Síguenos!
+                </span>
+                <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </footer>
+    </body>
+</html>

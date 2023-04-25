@@ -1,0 +1,1040 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/11/2020, 11:38:08 PM
+    Author     : Valentina
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+header{
+    background: linear-gradient(to right, #264d94, #641b67); 
+    padding: 2em;
+    color: white;
+}
+
+header img{
+    width: 200px;
+}
+
+/* CLASE BOTON GENERAL APRA TODOS */
+input[type=submit], a{
+    width: auto;
+    background-color: black;
+    border: 0;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    padding: 3px 10px;
+    color: white;
+    line-height: initial;
+    align-self: flex-end;
+    justify-self: flex-end;
+    text-decoration: none;
+}
+    
+input[type=submit], a:hover{
+    background: #1d8c77;
+}
+
+header a:hover{
+    background: transparent;
+}
+    
+/*---------------------------*/
+
+/*TIPOGRAFIA*/
+section:nth-of-type(1) h2,
+h3,
+h4{
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+/*---------------------------*/
+
+/*HEADER*/
+
+video{
+    display: none;
+}
+
+.contenidoMenu{ 
+    position: relative;
+    display: block;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+header figure{
+    border-bottom: 2px solid white;
+}
+
+#home nav{
+    padding: 1em 0;
+}
+
+nav > ul{
+    list-style:none;
+}
+
+nav > ul > li a{
+    background: transparent;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li{
+    padding: 1em 0;
+}
+
+.activo{
+    width: 25%;
+    margin: auto;
+    padding: 3px 10px;
+    background: #000;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.contenidoMenu + div{
+    position: relative;
+    padding-top: 4em;   
+}
+
+.contenidoMenu + div > a{
+    position: absolute;
+    right: 0em;
+    bottom: 0em;
+}
+
+
+.contenidoMenu + div p{
+    display: none;
+    padding-bottom: 1.5em;
+}
+
+#home form div{
+    display: none;
+}
+
+#home form{
+    display: flex;
+    justify-content: space-between;
+}
+
+#home aside{
+    padding: 2em;
+    position: relative;
+    background: rgba(0,0,0,.9);
+    color: #1d8c77;
+}
+
+.formHome{
+    padding: 2em 0;
+}
+
+
+
+@media screen and (min-width: 576px){
+
+    nav ul li{
+        padding: 0;
+    }
+
+    header figure{
+        text-align: left;
+        border-bottom: none;
+    }
+    
+     nav ul{
+        display: flex;
+        justify-content: center;
+        gap: 7em;   
+    }
+    
+    .contenidoMenu{
+        border-bottom: none;
+    }
+    
+    .contenidoMenu + div{
+        padding-top: 4em;
+    }
+    
+    .contenidoMenu + div p {
+        display: block;
+    }
+    
+    section:nth-of-type(1) h2{
+        padding-top: .2em;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    video{
+        display: block;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+    }
+    
+    #home aside{
+        background: #000;
+    }
+    
+    #home form div {
+        display: block;
+    }
+    
+    #home form{
+        justify-content: end;
+    }
+    
+    form {
+        z-index: 18;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        position: relative;
+    }
+
+    form h3,
+    form h2{
+        width: 100%;
+    }
+    
+    #home  label, 
+    #home  select {
+        display: inline-block;
+        height: 2em;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    input[type=number]{
+        width: 85px;
+    }
+    
+    .contenidoMenu{
+        padding-bottom: 7em;
+    }
+    
+    #home input[type=submit]{
+        background-color: #303037;
+        width: 13%;
+        font-size: 1em;
+        color:white;
+        line-height: 34px;
+    }
+    
+    #home input,
+    #home select{
+        line-height: 40px;
+        border:0;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        margin-top: 2px;
+        box-sizing: border-box;
+        width: 147px;
+        font-size: 20px;
+    }
+    
+    :-ms-input-placeholder { color: #000; }
+    ::-webkit-input-placeholder { color: #000; }     
+    :-moz-placeholder {  color: #000; } 
+    ::-moz-placeholder {  color: #000; }
+    
+}
+
+
+@media screen and (min-width: 992px){
+    
+    #home form div {
+        width: 140px;
+    }
+    
+    #home form{
+        justify-content: space-between;
+    }
+    
+    .contenidoMenu{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 7em;
+    }
+    
+    #home nav ul{
+        gap: 5em;
+    }
+    
+    .contenidoMenu figure img{
+        padding-right: 2em;
+    }
+}
+
+
+
+@media screen and (min-width: 1200px){
+    .activo{
+        width: 35%;
+    }
+    
+    #home form div {
+        width: 140px;
+        display: block;
+    }
+    
+    #home form div:nth-of-type(4) input{
+        width: 80%;
+    }
+     #home form div:nth-of-type(1) select{
+        width: 192px;
+    }
+     
+     .centrado{
+        width: 85%;
+        margin: 0 auto;
+        padding: 3em 0;
+    }
+    
+    .contenidoMenu{
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-bottom: 4em;
+    }
+
+    nav > ul{
+        display: flex;
+        position: absolute;
+        right: 0;
+        gap: 2em;
+    }
+
+
+    /* comienzo de FORMULAIRIO */
+   #home form {
+        z-index: 18;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+  
+    .formHome > label, 
+    .formHome > select {
+        display: inline-block;
+        height: 2em;
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    input[type=number]{
+        width: 40px;
+    }
+    
+}
+
+/*----------------------------*/
+
+/*SECCION LUGARES*/
+
+#home section:nth-of-type(1){
+    position: relative;
+    background-color: RGBA(255, 255, 255, .5);
+}
+
+#home section:nth-of-type(1) h2{
+    padding-left: 5%;
+}
+
+.texto{
+    display: none;
+}
+
+.contenedorMenuDos {
+    z-index: 15;
+    width: 90%;
+    margin: 20px auto;
+    padding: 5%;
+    display: grid;
+    grid-template: auto repeat(4, 1fr) / 100%; 
+    grid-gap: 2em
+ }
+    
+section:nth-of-type(1) .contenedorMenuDos img, 
+.eventos article figure img,
+.contenedorAlojamiento article figure img,
+.contenedorSugerencias article figure img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+section:nth-of-type(1) figure{
+    position: relative;
+}
+
+section:nth-of-type(1) figcaption{
+    width: 100%;
+    transition: all 1s ease;
+    position: absolute;
+    overflow: hidden;
+    bottom: .4em;
+    left: .4em;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    color: white;
+}
+
+
+
+@media screen and (min-width: 576px){
+     .contenedorMenuDos {
+    grid-template: auto repeat(2, 1fr) / repeat(2, 1fr);   
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+    section:nth-of-type(1)  article div:first-child{
+        display: flex;
+        gap: 1em;
+    }
+    
+    .texto a{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .texto{
+        display: block;
+        position: relative;
+        padding: .2em 0; 
+        width: 25%;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1200px){
+/*     CLASE CENTRADO GENERAL*/
+    .centrado{
+        width: 85%;
+        margin: 0 auto;
+        padding: 3em 0;
+    }
+    
+    section:nth-of-type(1) .contenedorMenuDos img, 
+    .eventos article figure img,
+    .contenedorAlojamiento article figure img{
+        height: 40vh;
+    }
+        
+    .contenedorMenuDos {
+        grid-template-columns: repeat(6, 1fr);
+        height: 75vh;
+    }
+    
+    .contenedorMenuDos h3, p{
+        flex: 1;
+    }
+    .contenedorMenuDos article:nth-of-type(1),
+    .contenedorMenuDos article:nth-of-type(2),
+    .contenedorMenuDos article:nth-of-type(3){
+        grid-column: span 2;
+    }
+    .contenedorMenuDos article:nth-of-type(4),
+    .contenedorMenuDos article:nth-of-type(5){
+        grid-column: span 3;
+    } 
+    
+}
+
+/*SEEEEEEEGUNDO SECTION*/
+#home section:nth-of-type(2){
+    color: white;
+    position: relative;
+    background: rgba(0,0,0,.9);
+    padding: 5%;
+}
+
+.eventos article:nth-of-type(3){
+    display: none;
+}
+
+.eventos article p,
+.eventos article ul,
+.contenedorAlojamiento article ul,
+.contenedorAlojamiento article p{
+    display: none;
+}
+
+
+.eventos article  ul,
+.contenedorAlojamiento article ul{
+    list-style: none;
+}
+
+.eventos,
+.contenedorAlojamiento,
+.contenedorSugerencias{
+    padding-top: 1em;
+}
+
+.eventos article  .textoDestCercanos{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+    padding-bottom: 2em;
+}
+
+section:nth-of-type(2) > div h3 + div + figure img{
+    display: none;
+}
+
+@media screen and (min-width: 576px){
+    .eventos article ul,
+    .contenedorAlojamiento article ul{
+        display: flex;
+    }
+    
+    .eventos article .textoDestCercanos,
+    .contenedorAlojamiento article .textoDestCercanos{
+        display: block;
+    }
+    .contCercanos{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .eventos{
+        display: flex;
+        gap: 2em;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    section:nth-of-type(2) a,
+    header a{
+        background: #1d8c77;
+    }
+    
+    section:nth-of-type(2) a:hover{
+        background: #303037;
+    }
+   
+    .eventos article p{
+        display: block;    
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .eventos article:nth-of-type(3){
+        display: block;
+    }
+    
+    
+}
+
+
+
+@media screen and (min-width: 1200px){
+    section:nth-of-type(2) > div h3 + div + figure img{
+        display: block;
+        mix-blend-mode: color-dodge;
+        animation: animacionEstrellas 6s ease infinite;
+        -webkit-animation: animacionEstrellas 6s ease infinite;
+        transform: translateX(-200px) scale(-1,1);
+        -webkit-transform: translateX(-200px) scale(-1,1);
+        -moz-transform: translateX(-200px) scale(-1,1);
+        -ms-transform: translateX(-200px) scale(-1,1);
+        -o-transform: translateX(-200px) scale(-1,1);
+    }
+
+    @keyframes animacionEstrellas {
+        0% {
+            transform: translateX(-200px) scale(-1,1);
+            -webkit-transform: translateX(-200px) scale(-1,1);
+            -moz-transform: translateX(-200px) scale(-1,1);
+            -ms-transform: translateX(-200px) scale(-1,1);
+            -o-transform: translateX(-200px) scale(-1,1);
+        }
+        50% {
+            transform: translateX(42vw) scale(-1,1);
+            -webkit-transform: translateX(42vw) scale(-1,1);
+            -moz-transform: translateX(42vw) scale(-1,1);
+            -ms-transform: translateX(42vw) scale(-1,1);
+            -o-transform: translateX(42vw) scale(-1,1);
+        }
+        50.1% {
+            transform: translateX(42vw) scale(1,1);
+            -webkit-transform: translateX(42vw) scale(1,1);
+            -moz-transform: translateX(42vw) scale(1,1);
+            -ms-transform: translateX(42vw) scale(1,1);
+            -o-transform: translateX(42vw) scale(1,1);
+        }   
+        100% {
+            transform: translateX(-200px) scale(1,1);
+            -webkit-transform: translateX(-200px) scale(1,1);
+            -moz-transform: translateX(-200px) scale(1,1);
+            -ms-transform: translateX(-200px) scale(1,1);
+            -o-transform: translateX(-200px) scale(1,1);
+        }  
+
+    }
+    
+    section:nth-of-type(2) > div h3 + div + figure{
+        padding-top: 6em;
+    }
+
+}
+
+
+
+
+
+/*--------- COMIENZA INDEX ALOJAMIENTO-------*/
+
+main > div + div{
+    background: #061b4b
+}
+
+form{
+    padding: .5em 2em;
+}
+
+.contenedorAlojamiento article .textoDestCercanos{
+    justify-content: space-between;
+    padding: 1em 0;
+    padding-bottom: 2em;
+}
+
+main form{
+    display: flex;
+    justify-content: space-between;
+}
+
+form div{
+    display: none;
+}
+
+main h1{
+    display: block;
+}
+
+#alojamiento .contenidoMenu{
+    border-bottom: 4px solid white;
+}
+
+#alojamiento header{
+    padding: 0;
+}
+
+#alojamiento section:nth-of-type(1),
+#alojamiento section:nth-of-type(2){
+    padding: 2em;
+}
+
+.contAlojamiento,
+.textoAlojamiento{
+    padding: .5em 0;
+}
+
+.numAlojamiento{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.numAlojamiento a:nth-of-type(1){
+    background: #000;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    color: white;
+    padding: .2em 0.4em;
+}
+
+.numAlojamiento a{
+    color: #000;
+    background: transparent;
+}
+
+
+ .cajaSlider{
+    display: none;
+}
+
+
+.bx-wrapper .bx-pager-item {
+    opacity: 0;
+}
+/*.bx-wrapper .bx-controls-direction a {  No me dejo cambiar el width de los botones del slider
+    width: 15px;
+    height: 25px;    
+}*/
+
+#alojamiento header{
+    background: linear-gradient(to right, #264d94, #99e969);
+}
+
+#alojamiento section:nth-of-type(2) article:nth-of-type(3){
+    display: none;
+}
+
+@media screen and (min-width: 576px){
+    .cajaSlider{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    #alojamiento .contenidoMenu{
+        border-bottom: none;
+    }
+    
+    main{
+        height: 70vh;
+        position: relative;
+    }
+    .slider div img{
+        width: 100%;
+        height: 70vh;
+    }
+    
+    main > div + div{ 
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+    }
+    
+    #alojamiento section:nth-of-type(1) div:first-child > div {
+        display: grid;
+        grid-gap: 2em;
+        grid-template: auto repeat(2, 2fr) / repeat(2, 2fr);   
+    }
+    
+    section:nth-of-type(1) ul li{
+        display: none;
+    }
+    
+    section:nth-of-type(2) article:nth-of-type(3){
+        display: none;
+    }
+    
+    .contenedorSugerencias{
+        display: flex;
+        gap: 2em;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .slider div img{
+        width: 100%;
+        height: 90vh;
+    }
+    
+    .cuatro label, legend {
+        padding-right: 1em;
+    }
+    
+     #alojamiento .contenidoMenu{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #alojamiento header img{
+        width: 100px;
+    }
+    
+    #alojamiento .contenidoMenu{
+        padding-bottom: 0;
+    }
+    
+    form div{
+        display: block;
+    }
+    
+   
+    form > h2 + div + div,
+    form > h2 + div + div + div,
+    form > h2 + div + div + div + div,
+    form > h2 + div{
+        display: flex;
+    }
+   
+    form > h2 + div + div{
+        gap: 1em;
+        width: 40%;
+    }
+    
+    form > h2 + div + div + div{
+        width: 100%;
+    }
+    
+    form > h2 + div + div + div select{
+        width: 150px;
+    }
+    
+    form > h2 + div + div + div + div{
+        padding-top: 2em;
+    }
+    
+     fieldset{
+        display: contents;
+        border: none;
+    }
+    
+    
+    #alojamiento section:nth-of-type(1){
+        background: #000 url(img/animacionFondo.svg) no-repeat center bottom -50px;
+        background-size: contain;
+        color: white;
+    }
+    
+    section:nth-of-type(1) p,
+    section:nth-of-type(1) ul li{
+        display: block;
+        font-weight: 600;
+    }
+
+    .contAlojamiento{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #alojamiento input, select{
+        border:0;
+        line-height: 30px;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        margin-top: 5px;
+    }
+    
+    input:focus{
+        outline: 0;
+        background-color: #1d8c77;
+    } 
+    
+    #alojamiento select{
+        padding: .6em 0;
+    }
+    
+   
+    
+    main{
+        height: 90vh;
+    }
+    
+      
+    #alojamiento section:nth-of-type(1) .contenedorAlojamiento a{
+        background: white;
+        color: #000;
+    }
+    
+    #alojamiento section:nth-of-type(1) .contenedorAlojamiento a:hover{
+        background: #1d8c77;
+    }
+    
+     #buscar:hover{
+        background: #303037;
+        color: white;
+    }
+    
+      form > h2 + div{
+        width: 70%;
+        gap: 1em;
+    }
+    
+}
+
+
+
+@media screen and (min-width: 992px){    
+    .centrado2{
+        width: 85%;
+        margin: 0 auto;
+    }
+    
+    #alojamiento form{
+        background: black;
+        color: white;
+        margin-bottom: 0;
+    }
+    
+    main > div + div{
+        background: transparent;
+    }
+    
+    #alojamiento section:nth-of-type(1) div:first-child > div{
+        grid-template: auto repeat(2, 2fr) / repeat(3, 2fr); 
+    }
+    
+    section:nth-of-type(2) article:nth-of-type(3){
+        display: block;
+    }
+    
+    .segundoForm{
+        width: 40%;
+        padding-top: 1em;
+        padding-right: 9em;
+    }
+    
+   #alojamiento section:nth-of-type(2) article:nth-of-type(3){
+        display: block;
+    }
+    
+    
+}
+
+
+
+
+
+@media screen and (min-width: 1200px){
+    
+    .centrado2{
+        width: 85%;
+        margin: 0 auto;
+    }
+    
+    
+     #alojamiento .contenidoMenu{
+        justify-content: space-between;
+    }
+    
+    form > h2 + div{
+        width: 50%;
+        gap: 1em;
+    }
+    
+    
+    .dos input{
+        width: 120px;
+    }
+    
+    .segundoForm{
+        padding-right: 0;
+        width: 28%;
+    }
+    
+    
+    #alojamiento header{
+        height: 30vh;
+        
+    }
+    
+    #alojamiento section:nth-of-type(2) .textoSug p{
+    display: block;
+    }
+    
+    .contenidoSugerencias{
+        display: flex;
+    }
+    
+    #alojamiento section:nth-of-type(2) figure{
+        padding-right: .5em;
+    }
+    
+    #alojamiento section:nth-of-type(2) figure img{
+        height: 30vh;
+    }
+  
+} 
+/*----------------------------------*/
+
+
+
+
+
+
+
+
+/* SEGUNDO SECTION ALOJAMIENTO */
+
+#alojamiento section:nth-of-type(2) p{
+    display: none;
+}
+
+
+/*UBICACIOOOOOOOOOOOOOON*/
+
+#ubicacion header{
+    background: url(img/ubicacion-min.jpg) no-repeat center center fixed;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+iframe {
+    width: 100%;
+}
+
+.ubicacion{
+    background: white;
+}
+
+.ubicacion a {
+    color: #000;
+}
+
+
+
+
+/*FOOTER*/
+footer{
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
+    padding: .5em;
+    background: #1d8c77;
+    color: white;
+    transition: 0.5s;
+}
+
+footer a{
+    background: transparent;
+}
+
+footer i:hover{
+    color: #000;
+}
+
+
+
+
